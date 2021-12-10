@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Autor: Hugo Bonilla C.
+        Módulo: Fundamentos Full Stack
+        Tarea: Actividad 1 - Final Flask
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Pedidos Pizzas Full Stack</title>
+</head>
+<body>
+    <div class="div_inline">
+        <img src="images/pizza.jpg" alt="Imagen de pizza full"/>
+        <h1>Pizzas Full Stack</h1>
+    </div>
+    <form id="frmfull" name="frmfull" method="post" action="http://localhost:5000/pizza">        
+        <h2>Datos del Cliente</h2>
+        <div id = "mensajes"></div>
+        <div class="div_cliente">            
+            <div class="elementos">
+                <label for="p1_nombre" id="lbl_nombre">Nombre</label>
+                <input type="text" id="p1_nombre" name ="p1_nombre"/>
+            </div>
+            <div class="elementos">
+                <label for="p2_apellidos" id="lbl_apellidos">Apellidos</label>
+                <input type="text" id="p2_apellidos" name ="p2_apellidos"/>
+            </div>
+            <div class="elementos">
+                <label for="p3_fechanac">Fecha de Nacimiento</label>
+                <input type="date" id="p3_fechanac" name ="p3_fechanac"/>
+            </div>
+            <div class="elementos">
+                <label for="p4_numtelefono">Número de Teléfono</label>
+                <input type="text" id="p4_numtelefono" name ="p4_numtelefono"/>
+            </div>
+            <div class="elementos">
+                <label for="p5_dirpostal">Dirección Postal</label>
+                <textarea id="p5_dirpostal" name="p5_dirpostal" rows="3" cols="40"></textarea>
+            </div>
+        </div>
+        <h2>Datos del pedido</h2>
+        <div class="div_pedido">
+            <div class="elementos">
+                <label for="p6_list_tampizza">Seleccione tamaño de pizza:</label>
+                <select id="p6_list_tampizza" name="p6_list_tampizza">
+                    <option id="t_peque" selected>Pequeña</option>
+                    <option id="t_media">Mediana</option>
+                    <option id="t_grand">Grande</option>
+                </select>                
+            </div>
+            <div class="elementos">
+                <label>Seleccione ingredientes deseados:</label><br>        
+                <label for="cbox_ing1"><input type="checkbox" id="cbox_ing1" name="cbox_ing1"> Jamón York</label><br>
+                <label for="cbox_ing2"><input type="checkbox" id="cbox_ing2" name="cbox_ing2"> Champiñones</label><br>
+                <label for="cbox_ing3"><input type="checkbox" id="cbox_ing3" name="cbox_ing3"> Pepperoni</label><br>
+                <label for="cbox_ing4"><input type="checkbox" id="cbox_ing4" name="cbox_ing4"> Aceitunas</label>                
+            </div>
+        </div>
+        <div class="elementos">
+            <button type="reset"> Limpiar </button>
+            <button type="submit"> Enviar </button>                   
+        </div>       
+    </form>
+    <script src ="js/script_jquery.js"></script>
+</body>
+</html>

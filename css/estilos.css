@@ -1,0 +1,6 @@
+*{font-family: verdana;}
+.div_inline { display: inline-flex; }
+.div_cliente { display: block; background-color: #55ccff;width: 520px;}
+.div_pedido { display: block; background-color: #40ccbb;width: 520px;}
+.elementos { display: inline-block; margin: 4px;}
+#mensajes {color: #dd255c;}
