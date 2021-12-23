@@ -47,11 +47,13 @@
             <div class="elementos">
                 <label for="p6_list_tampizza">Seleccione tamaño de pizza:</label>
                 <select id="p6_list_tampizza" name="p6_list_tampizza">
-                    <option id="t_peque" value="S" selected>Pequeña</option>
+                    <option id="-1" value="-1" selected>Seleccione</option>
+                    <option id="t_peque" value="S">Pequeña</option>
                     <option id="t_media" value="M">Mediana</option>
                     <option id="t_grand" value="L">Grande</option>
 					<option id="t_xxl" value="XXL">XXL</option>
-                </select>                
+                </select>
+                <span id="resultado_tamano"></span>                
             </div>
             <div class="elementos">
                 <label>Seleccione ingredientes deseados:</label><br>        

@@ -22,3 +22,24 @@ $("#frmfull").on('submit',function (e){
         e.preventDefault();
     }    
 });
+
+$("#p6_list_tampizza").on('change', function() {
+
+    //Se ejecuta cada vez que cambia el selector de tamaño de pizza
+    let form = new FormData();
+	form.append("p6_list_tampizza", this.value);
+
+	let settings = {
+	  "url": "http://localhost:5000/checksize",
+	  "method": "POST",
+	  "timeout": 0,
+	  "processData": false,
+	  "mimeType": "multipart/form-data",
+	  "contentType": false,
+	  "data": form
+	};
+
+	$.ajax(settings).done(function (response) {	  
+	  $("#resultado_tamano").text(response);
+	});
+});
